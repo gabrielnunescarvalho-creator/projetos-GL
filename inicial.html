@@ -3,9 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tela de login - Barbearia GL</title>
+    <link rel="stylesheet" href="style.css"/>
+
 </head>
-<body>
+<header>
+    <div class="header-topo">
+            <h1>Barbearia GL</h1>
+            <p>Aqui você fica top e tunadão</p>
+        </div>
+
+    <nav class="menu-navegacao">
+            <ul>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#servicos">Serviços</a></li>
+                <li><a href="index.html#agendamento">Agendamento</a></li>
+                <li><a href="index.html#contato">Contato</a></li> 
+                <li><a href="inicial.html">Login</a></li>
+            </ul>
+        </nav>
+        <hr>
+</header>
+
+<body> 
+
+    <main>
+        <!-- Seção: Login -->
+        <section id="login" class="secao login">
+            <h2>Área do Cliente</h2>
+            <p class="secao-subtitulo">Faça login para consultar seu histórico e gerenciar seus horários marcados.</p>
+
+            <form class="form-container form-login">
+                <div class="form-grupo">
+                    <label for="login-usuario">E-mail ou Telefone</label>
+                    <input type="text" id="login-usuario" name="usuario" placeholder="exemplo@email.com" required>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="login-senha">Senha</label>
+                    <input type="password" id="login-senha" name="senha" placeholder="Digite sua senha" required>
+                </div>
+
+                <div class="login-opcoes">
+                    <button type="submit" class="btn-acao">Entrar</button>
+                    <a href="#" class="link-esqueci">Esqueceu a senha?</a>
+                </div>
+
+                <div class="login-cadastro">
+                    <p>Ainda não tem cadastro? <a href="#">Cadastre-se aqui</a></p>
+                </div>
+            </form>
+        </section>
+    </main>
     
+</body>
+</html>
+
+<footer>
+        <p>&copy; 2026 Barbearia GL - Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>

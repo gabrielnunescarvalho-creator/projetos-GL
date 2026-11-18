@@ -4,50 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barbearia GL</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
     <header>
-        <h1>Seja bem-vindo à Barbearia GL</h1>
-        <p>Aqui você fica top e tunadão</p>
+        <div class="header-topo">
+            <h1>Barbearia GL</h1>
+            <p>Aqui você fica top e tunadão</p>
+        </div>
+
+        <!-- Links de navegação -->
+        <nav class="menu-navegacao">
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#agendamento">Agendamento</a></li>
+                <li><a href="#contato">Contato</a></li> 
+                <li><a href="inicial.html">Login</a></li>
+            </ul>
+        </nav>
         <hr>
-        
     </header>
 
     <main>
-        <section id="inicial" class="apresentacao">
-            <h2>Qualidade, Técnica e Respeito</h2>
+        <!-- Seção: Sobre -->
+        <section id="sobre" class="apresentacao secao">
+            <h2>Sobre a Barbearia GL</h2>
             <p>
                 Você não precisa de um discurso bonito, precisa de um barbeiro que saiba o que está fazendo.
                 Na Barbearia GL, a gente entrega pontualidade, técnica pesada e um resultado que fala por si só quando você passa na rua.
             </p>
+            <div class="sobre-destaques">
+                <div class="sobre-card">
+                    <h3>Tradição & Respeito</h3>
+                    <p>Ambiente descontraído, café/cerveja gelada e os melhores profissionais da área.</p>
+                </div>
+                <div class="sobre-card">
+                    <h3>Técnica & Precisão</h3>
+                    <p>Equipamentos higienizados, toalha quente e acabamento milimétrico em cada detalhe.</p>
+                </div>
+            </div>
         </section>
 
-        <section id="servicos" class="servicos">
+        <!-- Seção: Serviços -->
+        <section id="servicos" class="servicos secao">
             <h2>Nossos Serviços</h2>
 
             <div class="servicos-container">
                 <article class="servico-card servico-1">
-                    <h3>Serviço 1: Na Régua</h3>
-                    <p>Degradê limpo, transição invisível ou corte clássico na tesoura. Você diz o estilo, a gente executa com perfeição.</p>
+                    <div class="servico-info">
+                        <h3>Serviço 1: Na Régua</h3>
+                        <p>Degradê limpo, transição invisível ou corte clássico na tesoura. Você diz o estilo, a gente executa com perfeição.</p>
+                    </div>
+                    <span class="preco">R$ 35,00</span>
                 </article>
 
                 <article class="servico-card servico-2">
-                    <h3>Serviço 2: Barba de Respeito</h3>
-                    <p>Alinhamento milimétrico, hidratação pesada e finalização na navalha para tirar qualquer aspecto de desleixo em minutos.</p>
+                    <div class="servico-info">
+                        <h3>Serviço 2: Barba de Respeito</h3>
+                        <p>Alinhamento milimétrico, hidratação pesada e finalização na navalha para tirar qualquer aspecto de desleixo em minutos.</p>
+                    </div>
+                    <span class="preco">R$ 30,00</span>
                 </article>
 
                 <article class="servico-card servico-3">
-                    <h3>Serviço 3: O Combo</h3>
-                    <p>Para sair pronto para qualquer parada. Cabelo e barba resolvidos de uma vez só, no horário marcado, sem mofar na sala de espera.</p>
+                    <div class="servico-info">
+                        <h3>Serviço 3: O Combo</h3>
+                        <p>Para sair pronto para qualquer parada. Cabelo e barba resolvidos de uma vez só, no horário marcado, sem mofar na sala de espera.</p>
+                    </div>
+                    <span class="preco">R$ 60,00</span>
                 </article>
 
                 <article class="servico-card servico-4">
-                    <h3>Serviço 4: Os Ajustes</h3>
-                    <p>Sobrancelha limpa sem perder a naturalidade, pezinho marcado e tratamentos para manter o cabelo forte e no lugar.</p>
+                    <div class="servico-info">
+                        <h3>Serviço 4: Os Ajustes</h3>
+                        <p>Sobrancelha limpa sem perder a naturalidade, pezinho marcado e tratamentos para manter o cabelo forte e no lugar.</p>
+                    </div>
+                    <span class="preco">R$ 20,00</span>
                 </article>
             </div>
         </section>
+
+        <!-- Seção: Agendamento -->
+        <section id="agendamento" class="secao agendamento">
+            <h2>Faça seu Agendamento</h2>
+            <p class="secao-subtitulo">Escolha o serviço, selecione a data e garanta seu horário sem filas.</p>
+
+            <form class="form-container">
+                <div class="form-grupo">
+                    <label for="nome-cliente">Nome Completo</label>
+                    <input type="text" id="nome-cliente" name="nome" placeholder="Digite seu nome" required>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="telefone-cliente">WhatsApp / Telefone</label>
+                    <input type="tel" id="telefone-cliente" name="telefone" placeholder="(11) 99999-9999" required>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="servico-cliente">Selecione o Serviço</label>
+                    <select id="servico-cliente" name="servico" required>
+                        <option value="">-- Escolha um serviço --</option>
+                        <option value="corte">Na Régua (Corte) - R$ 35,00</option>
+                        <option value="barba">Barba de Respeito - R$ 30,00</option>
+                        <option value="combo">O Combo (Cabelo + Barba) - R$ 60,00</option>
+                        <option value="ajustes">Os Ajustes (Pezinho / Sobrancelha) - R$ 20,00</option>
+                    </select>
+                </div>
+
+                <div class="form-linha-dupla">
+                    <div class="form-grupo">
+                        <label for="data-agendamento">Data</label>
+                        <input type="date" id="data-agendamento" name="data" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="hora-agendamento">Horário</label>
+                        <input type="time" id="hora-agendamento" name="hora" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-acao">Confirmar Agendamento</button>
+            </form>
+        </section>
+
+        <!-- Seção: Contato -->
+        <section id="contato" class="secao contato">
+            <h2>Contato com a Barbearia</h2>
+            <p class="secao-subtitulo">Dúvidas, agendamentos especiais ou informações? Fale com a gente.</p>
+
+            <div class="contato-grid">
+                <div class="contato-card">
+                    <h3>📍 Localização</h3>
+                    <p>Av. Irmão Pereira, nº 410<br>Centro - Campo Mourão PR </p>
+                </div>
+
+                <div class="contato-card">
+                    <h3>💬 WhatsApp</h3>
+                    <p><a href="https://wa.me/5511999999999" target="_blank">(11) 99999-9999</a></p>
+                </div>
+
+                <div class="contato-card">
+                    <h3>🕒 Horários</h3>
+                    <p>Terça a Sábado: 09h às 19h<br>Segunda, Domingo e Feriados: Fechado</p>
+                </div>
+
+                <div class="contato-card">
+                    <h3>📸 Instagram</h3>
+                    <p><a href="#" target="_blank">@barbearia.gl</a></p>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Barbearia GL - Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
